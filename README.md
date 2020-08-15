@@ -39,4 +39,7 @@ n = p * q
 1 < e < φ(n)
 gcd(e, φ(n)) = 1
 ```
-5. Choose __d__ such that __e * d mod φ(n) = 1__
+5. Choose __d__ such that
+```
+e * d mod φ(n) = 1
+```
