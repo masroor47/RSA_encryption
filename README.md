@@ -32,7 +32,7 @@ gcd(e, φ(n)) = 1
 ```
 5. Choose __d__ such that
 ```
-e * d mod φ(n) = 1
+(e * d) mod φ(n) = 1
 ```
 
 ### To Encrypt
