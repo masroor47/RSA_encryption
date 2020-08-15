@@ -1,28 +1,19 @@
 # RSA Encryption
 
-I am implementing an RSA algorithm for string encryption
+I am implementing an RSA algorithm for string encryption.
 
-## How it works
+* __generate.py__ takes two prime numbers as an input and returns the encryption keys
 
-It uses prime numbers to generate a public __(e, n)__ and a private (d) key.
+* __encrypt.py__ takes a string and the public keys as an input, transcodes it into a number, runs it through the algorithm and returns an encrypted number
 
-### To Encrypt
-```
-m ^ e mod n = c
-```
-* __m__ - The message. __m ^ e > n__ and __m < n__
-* __e__ - Pubic key
-* __n__ - Public key
-
-### To Decrypt
-```
-c ^ d mod N = m
-```
-* __d__ - private key
-* __n__ - public key
+* __decrypt.py__ takes an encrypted number and the private key, runs it through the algorithm, turns it into a string and returns it
 
 ---
-## How to generate the keys
+## How does it do all that?
+
+It uses prime numbers to generate a public __(e, n)__ and a private __(d)__ key.
+
+### How to generate the keys
 
 1. Select two large distinct prime numbers __p__ and __q__
 
@@ -43,3 +34,18 @@ gcd(e, φ(n)) = 1
 ```
 e * d mod φ(n) = 1
 ```
+
+### To Encrypt
+```
+m ^ e mod n = c
+```
+* __m__ - The message. __m ^ e > n__ and __m < n__
+* __e__ - Pubic key
+* __n__ - Public key
+
+### To Decrypt
+```
+c ^ d mod N = m
+```
+* __d__ - private key
+* __n__ - public key
