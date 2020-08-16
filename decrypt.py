@@ -15,7 +15,7 @@ while value != -1:
     ascii_values.append(value)
     value = int(input("Enter value: "))
 
-print("You entered: " + ascii_values)
+print(f"You entered: {ascii_values}")
 
 d = int(input("Enter the private key: "))
 N = int(input("Enter the N: "))
