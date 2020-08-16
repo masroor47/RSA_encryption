@@ -1,7 +1,7 @@
 def decrypt(d, N, ascii_values):
     message = ""
     for i in range(len(ascii_values)):
-        ascii_values[i] = pow (ascii_values[i], d) % N
+        ascii_values[i] = pow (ascii_values[i], d, N)
 
     print(ascii_values)
     for i in ascii_values:

@@ -2,7 +2,7 @@ def encrypt(e, N, message):
     ascii_values = []
 
     for i in message:
-        ascii_values.append(pow (ord(i), e) % N)
+        ascii_values.append(pow (ord(i), e, N))
     print(f"Length: {len(ascii_values)}")
 
     return ascii_values
