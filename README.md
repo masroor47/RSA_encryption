@@ -34,7 +34,7 @@ gcd(e, φ(n)) = 1
 ```
 (e * d) mod φ(n) = 1
 ```
-
+Uses Extended Euclidian Algorithm
 ### To Encrypt
 ```
 m ^ e mod n = c
