@@ -2,11 +2,11 @@
 
 I am implementing an RSA algorithm for string encryption.
 
-* __generate.py__ takes two prime numbers as an input and returns the encryption keys
+* __generate.py__ Takes two prime numbers as an input and returns the encryption keys.
 
-* __encrypt.py__ takes a string and the public keys as an input, transcodes it into a number, runs it through the algorithm and returns an encrypted number
+* __encrypt.py__ Takes a string and the public keys as an input, transcodes it into a number, runs it through the algorithm and returns an encrypted number.
 
-* __decrypt.py__ takes an encrypted number and the private key, runs it through the algorithm, turns it into a string and returns it
+* __decrypt.py__ Takes an array of encrypted numbers, the private and the public key, runs them through the algorithm, turns the int array into a string and returns it.
 
 ---
 ## How does it do all that?
