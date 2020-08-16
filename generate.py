@@ -8,6 +8,19 @@ def gcd(p, q):
 def is_coprime(x, y):
     return gcd(x, y) == 1
 
+# Extended gcd
+def egcd(a, b):
+    if a == 0:
+        return (b, 0, 1)
+    else:
+        g, y, x = egcd(b % a, a)
+        return (g, x - (b // a) * y, y)
+        
+# Modular inverse
+def modinv(e, f):
+    g, x, y = egcd(e, f)
+    return x % f
+
 # Generating e and d keys using the two provided prime numbers
 def generate_keys(p, q):
     N = p * q
@@ -15,19 +28,11 @@ def generate_keys(p, q):
     # Finding phi. How many coprimes with N
     f = (p - 1) * (q - 1) 
 
-    # Finding e
-    for i in range(2, f):
-        if is_coprime(i, N) and is_coprime(i, f):
-            e = i
-            break
+    # 65537 is the commonly used value for e
+    e = 65537
         
     # Finding d
-    d = 1
-    while True:
-        if d * e % f == 1:
-            break
-        d += 1
-
+    d = modinv(e, f)
 
     return N, e, d
 
