@@ -1,4 +1,4 @@
-# RSA Encryptionn
+# RSA Encryption
 
 I am implementing an RSA algorithm for string encryption.
 
